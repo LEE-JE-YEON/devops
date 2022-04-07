@@ -33,7 +33,7 @@ jobs:
       - name: Run count total lines of code
         run: |
           echo "count total lines",
-          cnt=$(wc -l * | awk '{print $1}' | sed -n \$p),
+          cnt=$(wc -l * | awk '{print $1}' | sed -n \$p)
           if [ `expr ${cnt} % 2` -ne 0 ] ; then
             exit 1
           fi
