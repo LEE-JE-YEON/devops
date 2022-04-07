@@ -32,11 +32,11 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run count total lines of code
         run: |
-          echo "count total lines",
           cnt=$(wc -l * | awk '{print $1}' | sed -n \$p)
+          echo "count total lines = ${cnt}"
           if [ `expr ${cnt} % 2` -ne 0 ] ; then
-            echo "fail"
+            echo "odd. fail"
             exit 1
           else
-            echo "success"
+            echo "even. success"
           fi
