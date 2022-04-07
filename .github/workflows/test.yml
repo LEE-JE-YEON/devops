@@ -30,7 +30,8 @@ jobs:
         run: ls -al
 
       # Runs a set of commands using the runners shell
-      - name: Run count rows script
+      - name: Run count total lines of code
         run: |
-          echo "count rows",
-          wc -l test.txt
+          echo "count total lines",
+          wc -l test.txt,
+          exit 1
