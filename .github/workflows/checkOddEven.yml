@@ -35,8 +35,7 @@ jobs:
           cnt=$(wc -l * | awk '{print $1}' | sed -n \$p)
           echo "count total lines = ${cnt}"
           if [ `expr ${cnt} % 2` -ne 0 ] ; then
-            echo "odd. fail"
-            exit 1
+            echo "odd."
           else
-            echo "even. success"
+            echo "even."
           fi
