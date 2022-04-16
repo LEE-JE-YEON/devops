@@ -5,27 +5,27 @@ resource "aws_default_security_group" "default_SG" {
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-    description = "port 22 allow"
+    description = "22 포트 허용"
   }
   ingress {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-    description = "port 80 allow"
+    description = "80 포트 허용"
   }
   ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-    description = "port 443 allow"
+    description = "443 포트 허용"
   }
   egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
-    description = "All allow"
+    description = "전부 허용"
   }
 }

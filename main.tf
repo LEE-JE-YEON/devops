@@ -6,12 +6,12 @@ resource "aws_instance" "test_instance" {
   ami           = "ami-0454bb2fefc7de534"
   instance_type = "t2.micro"
   tags = {
-    Name = "HelloWorld"
+    Name = "테스트 리눅스 인스턴스"
   }
 }
 
 resource "aws_default_vpc" "default" {
   tags = {
-    Name = "Default VPC"
+    Name = "기본 VPC"
   }
 }
