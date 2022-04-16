@@ -10,10 +10,8 @@ resource "aws_instance" "test_instance" {
   }
 }
 
-resource "aws_vpc" "main_VPC" {
-  cidr_block = "172.29.0.0/16"
-  instance_tenancy = "default"
+resource "aws_default_vpc" "default" {
   tags = {
-    Name = "Main VPC"
+    Name = "Default VPC"
   }
 }

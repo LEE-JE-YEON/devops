@@ -1,5 +1,5 @@
 resource "aws_default_security_group" "default_SG" {
-  vpc_id      = "${aws_vpc.main_VPC.id}"
+  vpc_id      = "${aws_default_vpc.default.id}"
   ingress {
     from_port   = 22
     to_port     = 22
